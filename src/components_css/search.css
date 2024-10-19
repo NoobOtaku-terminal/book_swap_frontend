@@ -1,0 +1,66 @@
+.glow-border {
+    position: relative;
+    padding-bottom: 10px; /* Adjust spacing as needed */
+    border-bottom: 2px solid rgb(11, 1, 17); /* Purple bottom border visible at all times */
+    box-shadow: 0px 10px 20px -5px rgba(103, 94, 105, 0.6); /* Glow effect only at the bottom */
+    transition: box-shadow 1s ease-in; /* Fade-in effect for the shadow */
+  }
+  
+  .glow-border.fade-in {
+    box-shadow: 0px 10px 20px -5px rgba(156, 39, 176, 1); /* Stronger glow effect once faded in */
+  }
+  
+  /* Input field styling */
+  .ui-input-container {
+    position: relative;
+    width: 100%;
+    max-width: 300px; /* Or adjust as per your design */
+  }
+  
+  .ui-input {
+    width: 100%;
+    padding: 10px 10px 10px 40px;       
+    font-size: 1em;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    background-color: transparent;
+    transition: border-color 0.3s;
+  }
+  
+  .ui-input:focus {
+    border-color: #6c63ff;
+  }
+  
+  .ui-input-highlight {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: rgba(108, 99, 255, 0.1);
+    transition: width 0.3s;
+  }
+  
+  .ui-input:focus ~ .ui-input-highlight {
+    width: 100%;
+  }
+  
+  .ui-input-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    transition: color 0.3s;
+  }
+  
+  .ui-input:focus ~ .ui-input-icon {
+    color: #6c63ff;
+  }
+  
+  .ui-input-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+  
