@@ -1,8 +1,14 @@
 import React from 'react';
 import logo from '../assets/book.jpeg';
 import '../components_css/search.css';
+import { useNavigate } from 'react-router-dom';
 
 function Header() {
+
+    const navigate = useNavigate();
+    const handleAccount = () => {
+        navigate('/myaccount');
+    }
     return (
         <div className='glow-border mt-4'>
             <div className='d-flex justify-content-between align-items-center'>
@@ -30,8 +36,9 @@ function Header() {
                             </svg>
                         </div>
                     </div>
-                    <div>
+                    <div><button onClick={handleAccount}>
                         <img src={logo} alt="logo" style={{ width: "50px", height: "50px", borderRadius: "50%" }} />
+                        </button>
                     </div>
                 </div>
             </div>
