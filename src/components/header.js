@@ -9,11 +9,15 @@ function Header() {
     const handleAccount = () => {
         navigate('/myaccount');
     }
+    const goHome = () => {
+        navigate('/');
+    }
     return (
         <div className='glow-border mt-4'>
             <div className='d-flex justify-content-between align-items-center'>
-                <div>
+                <div ><button onClick={handleAccount} style={{ border: 'none', borderRadius: "50%", backgroundColor: 'transparent' }}>
                     <img src={logo} alt="logo" style={{ width: "50px", height: "50px", borderRadius: "50%" }} />
+                </button>
                 </div>
                 <div className='d-flex'>
                     <div className="ui-input-container">
@@ -36,9 +40,9 @@ function Header() {
                             </svg>
                         </div>
                     </div>
-                    <div><button onClick={handleAccount}>
+                    <div><button onClick={handleAccount} style={{ border: 'none', borderRadius: "50%", backgroundColor: 'transparent' }}>
                         <img src={logo} alt="logo" style={{ width: "50px", height: "50px", borderRadius: "50%" }} />
-                        </button>
+                    </button>
                     </div>
                 </div>
             </div>

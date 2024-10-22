@@ -1,9 +1,14 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
-function categories() {
+function Categories() {
+    const navigate = useNavigate();
+    const handleCategory = () => {
+        navigate('/category');
+    }
     return (
         <div className='d-flex justify-content-between px-5 py-4' >
-            <div>
+            <div onClick={handleCategory}>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="70" height="70">
 
                     <circle cx="256" cy="256" r="256" fill="#3a3a8e" />
@@ -23,7 +28,7 @@ function categories() {
                 <h4>category1</h4>
             </div>
 
-            <div>
+            <div onClick={handleCategory}>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="70" height="70">
 
                     <circle cx="256" cy="256" r="256" fill="#3a3a8e" />
@@ -41,7 +46,7 @@ function categories() {
                 </svg>
                 <h4>category2</h4>
             </div>
-            <div>
+            <div onClick={handleCategory}>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="70" height="70">
 
                     <circle cx="256" cy="256" r="256" fill="#3a3a8e" />
@@ -59,7 +64,7 @@ function categories() {
                 </svg>
                 <h4>category3</h4>
             </div>
-            <div>
+            <div onClick={handleCategory}>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="70" height="70">
 
                     <circle cx="256" cy="256" r="256" fill="#3a3a8e" />
@@ -77,7 +82,7 @@ function categories() {
                 </svg>
                 <h4>category4</h4>
             </div>
-            <div>
+            <div onClick={handleCategory}>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="70" height="70">
 
                     <circle cx="256" cy="256" r="256" fill="#3a3a8e" />
@@ -101,4 +106,4 @@ function categories() {
     )
 }
 
-export default categories
+export default Categories;

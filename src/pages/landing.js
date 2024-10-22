@@ -6,9 +6,9 @@ import Slide from '../components/slide'
 function landing() {
   return (
     <div>
-      <Header/>
-      <Categories/>
-      <Slide/>
+      {/* <Header/> */}
+      <Categories />
+      <Slide />
     </div>
   )
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
-import styled from "styled-components";
+import '../components_css/slide.css'; // Import the new CSS file
 
 import book from "../assets/image.png";
 
@@ -57,106 +57,53 @@ function Slide() {
   return (
     <div>
       {categories.map((category, index) => (
-        <CategorySection key={index}>
-          <CategoryName>{category.name}</CategoryName>
+        <div key={index} className="category-section">
+          <h2 className="category-name">{category.name}</h2>
           <Splide options={{
-            perPage: 4,
+            perPage: 7, // Show 4 slides per row by default (for large screens)
             perMove: 1,
-            arrows: false,
-            pagination: false,
-            drag: "free",
-            gap: "2rem",
+            gap: '1.5rem', // Space between the cards
+            breakpoints: {
+
+              1440: {
+                perPage: 5,
+                gap: '1.2rem',
+              },
+              1024: {
+                perPage: 4,
+                gap: '1.2rem',
+              },
+              1200: {
+                perPage: 3,
+                gap: '1.2rem',
+              },
+              800: {
+                perPage: 2,
+                gap: '1rem',
+              },
+              600: {
+                perPage: 1,
+                gap: '0.8rem',
+              },
+            },
           }}>
             {category.books.map((bookInfo, idx) => (
               <SplideSlide key={idx}>
-                <Card>
+                <div className="card">
                   <img src={book} alt="Book" />
-                  <BookInfo>
-                    <BookName>{bookInfo.title}</BookName>
-                    <AuthorName>{bookInfo.author}</AuthorName>
-                    <Button>Borrow</Button>
-                  </BookInfo>
-                </Card>
+                  <div className="book-info">
+                    <h3 className="book-name">{bookInfo.title}</h3>
+                    <p className="author-name">{bookInfo.author}</p>
+                    <button className="button">Borrow</button>
+                  </div>
+                </div>
               </SplideSlide>
             ))}
           </Splide>
-        </CategorySection>
+        </div>
       ))}
     </div>
   );
 }
-
-// Styled components
-const CategorySection = styled.div`
-  margin-bottom: 3rem;
-  padding: 1rem;
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-
-  &:nth-child(even) {
-    background-color: #f0f0f0;
-  }
-`;
-
-const CategoryName = styled.h2`
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  color: #333;
-  text-align: left; /* Left indented */
-  padding-left: 1rem;
-`;
-
-const Card = styled.div`
-  width: 200px;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  overflow: hidden;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    margin-bottom: 1rem;
-  }
-`;
-
-const BookInfo = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-
-const BookName = styled.h3`
-  font-size: 1rem;
-  margin: 0.5rem 0;
-  color: #333;
-`;
-
-const AuthorName = styled.p`
-  font-size: 0.9rem;
-  color: #777;
-`;
-
-const Button = styled.button`
-  background-color: #ff4b2b;
-  color: white;
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 0.5rem;
-  font-size: 0.9rem;
-
-  &:hover {
-    background-color: #ff1e1e;
-  }
-`;
 
 export default Slide;
