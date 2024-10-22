@@ -4,23 +4,26 @@ import '../components_css/search.css';
 import { useNavigate } from 'react-router-dom';
 
 function Header() {
-
     const navigate = useNavigate();
+
     const handleAccount = () => {
         navigate('/myaccount');
     }
+
     const goHome = () => {
         navigate('/');
     }
+
     return (
-        <div className='glow-border mt-4'>
-            <div className='d-flex justify-content-between align-items-center'>
-                <div ><button onClick={handleAccount} style={{ border: 'none', borderRadius: "50%", backgroundColor: 'transparent' }}>
-                    <img src={logo} alt="logo" style={{ width: "50px", height: "50px", borderRadius: "50%" }} />
-                </button>
+        <div className='glow-border' style={{ backgroundColor: '#2c2e40', padding: '1rem 4rem' }}> {/* Corrected padding */}
+            <div className='d-flex justify-content-between align-items-center mx-4'> {/* Use Bootstrap margin utility class */}
+                <div>
+                    <button onClick={goHome} style={{ border: 'none', borderRadius: "50%", backgroundColor: 'transparent' }}>
+                        <img src={logo} alt="logo" style={{ width: "50px", height: "50px", borderRadius: "50%" }} />
+                    </button>
                 </div>
-                <div className='d-flex'>
-                    <div className="ui-input-container">
+                <div className='d-flex' >
+                    <div className="ui-input-container" style={{ marginRight: '4rem' }}>
                         <input
                             required
                             placeholder="Type something..."
@@ -40,9 +43,10 @@ function Header() {
                             </svg>
                         </div>
                     </div>
-                    <div><button onClick={handleAccount} style={{ border: 'none', borderRadius: "50%", backgroundColor: 'transparent' }}>
-                        <img src={logo} alt="logo" style={{ width: "50px", height: "50px", borderRadius: "50%" }} />
-                    </button>
+                    <div>
+                        <button onClick={handleAccount} style={{ border: 'none', borderRadius: "50%", backgroundColor: 'transparent' }}>
+                            <img src={logo} alt="logo" style={{ width: "50px", height: "50px", borderRadius: "50%" }} />
+                        </button>
                     </div>
                 </div>
             </div>
