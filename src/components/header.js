@@ -16,11 +16,12 @@ function Header() {
 
     return (
         <div className='glow-border' style={{ backgroundColor: '#2c2e40', padding: '1rem 4rem' }}> {/* Corrected padding */}
-            <div className='d-flex justify-content-between align-items-center mx-4'> {/* Use Bootstrap margin utility class */}
-                <div>
-                    <button onClick={goHome} style={{ border: 'none', borderRadius: "50%", backgroundColor: 'transparent' }}>
+            <div className='d-flex justify-content-between align-items-center mx-4 '> {/* Use Bootstrap margin utility class */}
+                <div onClick={goHome} className='d-flex justify-content-center align-items-center hover'>
+                    <button style={{ border: 'none', borderRadius: "50%", backgroundColor: 'transparent' }}>
                         <img src={logo} alt="logo" style={{ width: "50px", height: "50px", borderRadius: "50%" }} />
                     </button>
+                    <div className='henny-penny-regular'>BOOKMATE</div>
                 </div>
                 <div className='d-flex' >
                     <div className="ui-input-container" style={{ marginRight: '4rem' }}>
@@ -43,7 +44,7 @@ function Header() {
                             </svg>
                         </div>
                     </div>
-                    <div>
+                    <div className='hover'>
                         <button onClick={handleAccount} style={{ border: 'none', borderRadius: "50%", backgroundColor: 'transparent' }}>
                             <img src={logo} alt="logo" style={{ width: "50px", height: "50px", borderRadius: "50%" }} />
                         </button>

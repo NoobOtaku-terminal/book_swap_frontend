@@ -3,6 +3,11 @@
     color: #fff;
     padding: 40px 0;
     font-size: 14px;
+    position: static;
+    /* margin-top: auto;
+    left: 0;
+    bottom: 0; */
+    width: 100%;
 }
 
 .footer-container {

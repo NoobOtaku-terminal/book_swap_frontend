@@ -8,7 +8,7 @@ function Categories() {
     }
     return (
         <div className='d-flex justify-content-between px-5 py-4' >
-            <div onClick={handleCategory}>
+            <div onClick={handleCategory} className='hover'>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="70" height="70">
 
                     <circle cx="256" cy="256" r="256" fill="#3a3a8e" />
@@ -28,7 +28,7 @@ function Categories() {
                 <h4>category1</h4>
             </div>
 
-            <div onClick={handleCategory}>
+            <div onClick={handleCategory} className='hover'>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="70" height="70">
 
                     <circle cx="256" cy="256" r="256" fill="#3a3a8e" />
@@ -46,7 +46,7 @@ function Categories() {
                 </svg>
                 <h4>category2</h4>
             </div>
-            <div onClick={handleCategory}>
+            <div onClick={handleCategory} className='hover'>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="70" height="70">
 
                     <circle cx="256" cy="256" r="256" fill="#3a3a8e" />
@@ -64,7 +64,7 @@ function Categories() {
                 </svg>
                 <h4>category3</h4>
             </div>
-            <div onClick={handleCategory}>
+            <div onClick={handleCategory} className='hover'>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="70" height="70">
 
                     <circle cx="256" cy="256" r="256" fill="#3a3a8e" />
@@ -82,7 +82,7 @@ function Categories() {
                 </svg>
                 <h4>category4</h4>
             </div>
-            <div onClick={handleCategory}>
+            <div onClick={handleCategory} className='hover'>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="70" height="70">
 
                     <circle cx="256" cy="256" r="256" fill="#3a3a8e" />
