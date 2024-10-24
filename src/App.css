@@ -1,12 +1,10 @@
 .App {
     text-align: center;
     margin: 0% 10%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
+    display: flex; /* Enable flexbox layout */
+    flex-direction: column; /* Stack children vertically */
+    min-height: 100vh;
 }
-
 .App-logo {
     height: 40vmin;
     pointer-events: none;
@@ -48,4 +46,7 @@
     to {
         transform: rotate(360deg);
     }
+}
+.footer {
+    margin-top: auto; /* Push the footer to the bottom */
 }
