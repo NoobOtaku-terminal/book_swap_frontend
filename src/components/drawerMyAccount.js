@@ -1,43 +1,47 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Borrowedbook from './borrowedbook';
 function DrawerMyAccount() {
   // State to track which menu item is selected
   const [selectedMenu, setSelectedMenu] = useState('Home');
   const navigate = useNavigate();
   // Function to render content based on selected menu
-  const handleToHome = () =>{
+  const handleToHome = () => {
     navigate('/');
   }
   const renderContent = () => {
     switch (selectedMenu) {
       case 'Home':
-        return <div>Welcome to the Home page</div>;
+        return <div>Welcome to the Account page</div>;
       case 'BooksBorrowed':
-        return <div>Your borrowed books are listed here</div>;
+        return <div>Your borrowed books are listed here
+          <Borrowedbook bookid="1" />
+        </div>;
       case 'MyBooks':
         return <div>Your personal book collection is here</div>;
       default:
-        return <div>Welcome to the Home page</div>;
+        return <div>Welcome to the Account page</div>;
     }
   };
 
   return (
     <div style={{ display: 'flex', border: '1px solid black' }}>
       <div style={{ display: 'flex', flexDirection: 'column', width: '20%' }}>
-        <button 
-          style={{ padding: '10px 0px', margin: '10% 0%' }} 
+        <button
+          style={{ padding: '10px 0px', margin: '10% 0%' }}
           onClick={handleToHome}
         >
           Home
         </button>
-        <button 
-          style={{ padding: '10px 0px', margin: '10% 0%' }} 
+        <button
+          style={{ padding: '10px 0px', margin: '10% 0%' }}
           onClick={() => setSelectedMenu('BooksBorrowed')}
         >
           Books Borrowed
+
         </button>
-        <button 
-          style={{ padding: '10px 0px', margin: '10% 0%' }} 
+        <button
+          style={{ padding: '10px 0px', margin: '10% 0%' }}
           onClick={() => setSelectedMenu('MyBooks')}
         >
           My Books

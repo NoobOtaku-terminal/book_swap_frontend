@@ -1,0 +1,33 @@
+.book-info {
+    display: flex; /* Use flexbox for row layout */
+    flex-direction: row;
+    align-items: center;
+    padding: 20px; /* Add some padding */
+    border: 1px solid #ccc; /* Optional: add a border */
+    border-radius: 8px; /* Optional: rounded corners */
+    background-color: #f9f9f9; /* Optional: background color */
+    margin: 10px 0; /* Optional: margin between rows */
+}
+
+.book-image {
+    width: 100px; /* Set the width of the image */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 20px; /* Space between image and text */
+}
+
+.book-details {
+    /* flex: 1; Allow details to take the remaining space */
+    text-align: left;
+}
+
+.book-title {
+    font-size: 1.5em; /* Larger font size for title */
+    margin: 0; /* Remove default margin */
+}
+
+.book-author,
+.book-borrowed-date,
+.book-borrowed-from {
+    margin: 5px 0; /* Space between text elements */
+    font-size: 1em; /* Set font size */
+}
