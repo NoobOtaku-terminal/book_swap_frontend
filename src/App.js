@@ -6,20 +6,26 @@ import MyAccount from './pages/myaccount';
 import Header from './components/header';
 import Login from './pages/login';
 import Category from './pages/category'
+import Footer from './components/footer'
 function AppContent() {
   const location = useLocation();  // useLocation now works because it's inside Router
   const hideHeader = ['/login' ];  // List of routes where the header should be hidden
 
   return (
-    <div className="App">
+    <div >
       {/* Conditionally render Header based on current path */}
       {!hideHeader.includes(location.pathname) && <Header />}
-      <Routes>
-        <Route path='/' element={<Landing />} />
-        <Route path="/myaccount" element={<MyAccount />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/category" element={<Category />} />
-      </Routes>
+      <div className="App">
+
+        <Routes>
+          <Route path='/' element={<Landing />} />
+          <Route path="/myaccount" element={<MyAccount />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/category" element={<Category />} />
+        </Routes>
+      </div>
+
+      <Footer />
     </div>
   );
 }
