@@ -8,7 +8,7 @@ import Login from './pages/login';
 import Category from './pages/category'
 function AppContent() {
   const location = useLocation();  // useLocation now works because it's inside Router
-  const hideHeader = ['/login'];  // List of routes where the header should be hidden
+  const hideHeader = ['/login' ];  // List of routes where the header should be hidden
 
   return (
     <div className="App">

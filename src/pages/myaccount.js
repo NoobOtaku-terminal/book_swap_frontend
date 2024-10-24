@@ -1,10 +1,8 @@
 import React from 'react'
-
+import Myaccountheader from '../components/headerMyAccount'
 function myaccount() {
   return (
-    <div>
-      <h1>this is my account</h1>
-    </div>
+      <Myaccountheader/>
   )
 }
 
