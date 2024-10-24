@@ -7,6 +7,14 @@
     height: 40vmin;
     pointer-events: none;
 }
+.henny-penny-regular {
+    font-family: "Henny Penny", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: aliceblue;
+    font-size: 1.8rem;
+    margin-left: 10px;
+}
 
 @media (prefers-reduced-motion: no-preference) {
     .App-logo {
