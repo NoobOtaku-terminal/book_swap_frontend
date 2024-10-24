@@ -1,6 +1,6 @@
 .book-info {
     display: flex; /* Use flexbox for row layout */
-    flex-direction: row;
+    flex-direction: column; /* Stack items vertically */
     align-items: center;
     padding: 20px; /* Add some padding */
     border: 1px solid #ccc; /* Optional: add a border */
