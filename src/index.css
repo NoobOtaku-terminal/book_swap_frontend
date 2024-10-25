@@ -13,3 +13,9 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
         monospace;
 }
+.clamp-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* Change the number for how many lines you want */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}

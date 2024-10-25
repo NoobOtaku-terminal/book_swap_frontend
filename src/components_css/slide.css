@@ -16,7 +16,7 @@
 }
 
 .card {
-    width: 10rem; /* Ensure a minimum width to avoid shrinking too much */
+    width: 11rem; /* Ensure a minimum width to avoid shrinking too much */
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

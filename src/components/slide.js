@@ -92,7 +92,7 @@ function Slide() {
                 <div className="card">
                   <img src={book} alt="Book" />
                   <div className="book-info">
-                    <h3 className="book-name">{bookInfo.title}</h3>
+                    <h3 className="book-name clamp-text" >{bookInfo.title}</h3>
                     <p className="author-name">{bookInfo.author}</p>
                     <button className="button">Borrow</button>
                   </div>
