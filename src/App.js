@@ -21,7 +21,8 @@ function AppContent() {
           <Route path='/' element={<Landing />} />
           <Route path="/myaccount" element={<MyAccount />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/category" element={<Category />} />
+          {/* <Route path="/category" element={<Category />} /> */}
+          <Route path="/category/:categoryName" element={<Category />} />
         </Routes>
       </div>
 

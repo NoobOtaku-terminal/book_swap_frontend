@@ -2,58 +2,11 @@ import React from 'react';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
 import '../components_css/slide.css'; // Import the new CSS file
-
+import  categories  from '../assets/data';
 import book from "../assets/image.png";
 
 function Slide() {
-  const categories = [
-    {
-      name: "Self-help",
-      books: [
-        { title: "Atomic Habits", author: "James Clear" },
-        { title: "The Hidden Hindu", author: "Akshat Gupta" },
-        { title: "Do It Today", author: "Darius Foroux" },
-        { title: "The Courage to Be Disliked", author: "Ichiro Kishimi" },
-        { title: "Don't Believe Everything You Think", author: "Joseph Nguyen" },
-        { title: "The Power of Habit", author: "Charles Duhigg" },
-        { title: "Grit", author: "Angela Duckworth" },
-        { title: "Mindset", author: "Carol Dweck" },
-        { title: "Deep Work", author: "Cal Newport" },
-        { title: "The 5 AM Club", author: "Robin Sharma" }
-      ],
-    },
-    {
-      name: "Fiction",
-      books: [
-        { title: "Ikigai", author: "Hector Garcia" },
-        { title: "The Mountain Is You", author: "Brianna Wiest" },
-        { title: "The Alchemist", author: "Paulo Coelho" },
-        { title: "The Night Circus", author: "Erin Morgenstern" },
-        { title: "Dune", author: "Frank Herbert" },
-        { title: "1984", author: "George Orwell" },
-        { title: "To Kill a Mockingbird", author: "Harper Lee" },
-        { title: "The Catcher in the Rye", author: "J.D. Salinger" },
-        { title: "Brave New World", author: "Aldous Huxley" },
-        { title: "The Great Gatsby", author: "F. Scott Fitzgerald" }
-      ],
-    },
-    {
-      name: "Science",
-      books: [
-        { title: "Sapiens", author: "Yuval Noah Harari" },
-        { title: "The Selfish Gene", author: "Richard Dawkins" },
-        { title: "A Brief History of Time", author: "Stephen Hawking" },
-        { title: "The Gene", author: "Siddhartha Mukherjee" },
-        { title: "Cosmos", author: "Carl Sagan" },
-        { title: "The Immortal Life of Henrietta Lacks", author: "Rebecca Skloot" },
-        { title: "The Order of Time", author: "Carlo Rovelli" },
-        { title: "The Emperor of All Maladies", author: "Siddhartha Mukherjee" },
-        { title: "The Structure of Scientific Revolutions", author: "Thomas Kuhn" },
-        { title: "Homo Deus", author: "Yuval Noah Harari" }
-      ],
-    }
-  ];
-
+  // categories 
   return (
     <div>
       {categories.map((category, index) => (
