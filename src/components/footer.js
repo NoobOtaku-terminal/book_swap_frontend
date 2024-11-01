@@ -1,8 +1,14 @@
 import React from 'react';
 import '../components_css/footer.css'; // You can adjust styles in this file
 import { FaFacebookF, FaInstagram, FaTwitter } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
+
 
 function Footer() {
+    const navigate = useNavigate();
+    const handleContact = () => {
+        navigate('/contactus');
+    };
     return (
         <footer className="footer">
             <div className="footer-container">
@@ -25,7 +31,8 @@ function Footer() {
 
                 {/* Contact Section */}
                 <div className="footer-section contact">
-                    <h3>Contact Us</h3>
+                    <div onClick={handleContact}><h3>Contact Us</h3></div>
+
                     <p><i className="fas fa-phone"></i> +91 7908099399</p>
                     <p><i className="fas fa-phone"></i> +91 7908099399</p>
                     <p><i className="fas fa-envelope"></i> support@bookswap.com</p>
