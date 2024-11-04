@@ -2,7 +2,7 @@ import React from 'react';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
 import '../components_css/slide.css'; // Import the new CSS file
-import  categories  from '../assets/data';
+import categories from '../assets/data';
 import book from "../assets/image.png";
 
 function Slide() {
@@ -11,7 +11,7 @@ function Slide() {
     <div>
       {categories.map((category, index) => (
         <div key={index} className="category-section">
-          <h2 className="category-name">{category.name}</h2>
+          <h2 className="slide-category-name">{category.name}</h2>
           <Splide options={{
             perPage: 7, // Show 4 slides per row by default (for large screens)
             perMove: 1,

@@ -14,6 +14,13 @@ function Header() {
         navigate('/');
     }
 
+    const isAuthenticated = localStorage.getItem('isAuthenticated');
+
+    const handleLogin = () => {
+        navigate('/login');  // Redirect to login page
+    };
+
+
     return (
         <div className='glow-border' style={{ backgroundColor: '#2c2e40', padding: '1rem 4rem' }}> {/* Corrected padding */}
             <div className='d-flex justify-content-between align-items-center mx-4 '> {/* Use Bootstrap margin utility class */}
@@ -45,9 +52,33 @@ function Header() {
                         </div>
                     </div>
                     <div className='hover'>
-                        <button onClick={handleAccount} style={{ border: 'none', borderRadius: "50%", backgroundColor: 'transparent' }}>
-                            <img src={logo} alt="logo" style={{ width: "50px", height: "50px", borderRadius: "50%" }} />
-                        </button>
+                        {isAuthenticated ? (
+                            // Display avatar button when logged in
+                            <button
+                                onClick={handleAccount}
+                                style={{ border: 'none', borderRadius: '50%', backgroundColor: 'transparent' }}
+                            >
+                                <img
+                                    src={logo} // Display user avatar when authenticated
+                                    alt="User Avatar"
+                                    style={{ width: '50px', height: '50px', borderRadius: '50%' }}
+                                />
+                            </button>
+                        ) : (
+                            // Display login button when not logged in
+                            <button
+                                onClick={handleLogin}
+                                style={{ border: 'none', borderRadius: '50%', backgroundColor: 'transparent' }}
+                            >
+                                <img
+                                    src={logo} // Display default avatar or login icon
+                                    alt="Login"
+                                    style={{ width: '50px', height: '50px', borderRadius: '50%' }}
+                                />
+                                {/* Or replace img with text */}
+                                {/* <span>Login</span> */}
+                            </button>
+                        )}
                     </div>
                 </div>
             </div>
