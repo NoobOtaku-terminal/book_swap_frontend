@@ -1,0 +1,122 @@
+/* General Glow Border */
+.glow-border {
+    position: relative;
+    padding-bottom: 10px; /* Adjust spacing as needed */
+    border-bottom: 2px solid rgb(11, 1, 17); /* Purple bottom border visible at all times */
+    box-shadow: 0px 10px 20px -5px rgba(103, 94, 105, 0.6); /* Glow effect only at the bottom */
+    transition: box-shadow 1s ease-in; /* Fade-in effect for the shadow */
+}
+
+.glow-border.fade-in {
+    box-shadow: 0px 10px 20px -5px rgba(156, 39, 176, 1); /* Stronger glow effect once faded in */
+}
+
+/* Input Field Styling - Kept as Requested */
+.ui-input-container {
+    position: relative;
+    width: 100%;
+    max-width: 300px; /* Or adjust as per your design */
+}
+
+.ui-input {
+    width: 100%;
+    padding: 10px 10px 10px 40px;
+    font-size: 1em;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    background-color: transparent;
+    transition: border-color 0.3s;
+}
+
+.ui-input:focus {
+    border-color: #6c63ff;
+}
+
+.ui-input-highlight {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: rgba(108, 99, 255, 0.1);
+    transition: width 0.3s;
+}
+
+.ui-input:focus ~ .ui-input-highlight {
+    width: 100%;
+}
+
+.ui-input-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    transition: color 0.3s;
+}
+
+.ui-input:focus ~ .ui-input-icon {
+    color: #6c63ff;
+}
+
+.ui-input-icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Auth Buttons */
+.auth-buttons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.auth-options {
+    display: flex;
+    gap: 1rem;
+}
+
+.auth-button {
+    border: none;
+    background-color: #3f4153;
+    color: #ffffff;
+    padding: 0.5rem 1.2rem;
+    border-radius: 8px; /* Softer corners */
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.auth-button:hover {
+    background-color: #ffcc00;
+    color: #2c2e40;
+    box-shadow: 0 6px 12px rgba(255, 204, 0, 0.3); /* Slightly stronger shadow on hover */
+}
+
+.auth-button:active {
+    transform: scale(0.98); /* Slight press-down effect */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Avatar Button Styling */
+.avatar-button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+}
+
+.avatar-button:hover .avatar {
+    box-shadow: 0 0 8px rgba(255, 204, 0, 0.5); /* Glow effect on hover */
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: box-shadow 0.3s ease;
+}

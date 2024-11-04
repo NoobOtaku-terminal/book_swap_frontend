@@ -1,0 +1,118 @@
+/* ContactUs.css */
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+    /* max-width: 1200px; */
+    /* margin: 0 auto; */
+    margin-top: 5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info {
+    text-align: left;
+    max-width: 500px;
+    margin-top: 2rem;
+    /* padding-right: 40px; */
+    color: #333;
+}
+
+.contact-info h3 {
+    font-size: 1.2em;
+    color: #6a1b9a;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.contact-info h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin: 10px 0 20px;
+}
+
+.contact-info p {
+    font-size: 1em;
+    color: #555;
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+    margin-bottom: 15px;
+    color: #333;
+    font-weight: bold;
+    text-align: left; /* Aligns label text to the left */
+    display: block; /* Ensures label text is aligned above the input */
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1em;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #fafafa;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #6a1b9a;
+}
+
+.contact-form textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.terms {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    color: #555;
+}
+
+.terms input {
+    margin-right: 8px;
+}
+
+.contact-button {
+    background-color: #6a1b9a;
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.contact-button:hover {
+    background-color: #5b1784;
+}
+
+.contact-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
