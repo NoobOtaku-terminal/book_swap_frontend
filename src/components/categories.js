@@ -22,7 +22,7 @@ function Categories() {
                 <h4>category1</h4>
             </div>
 
-            <div onClick={() => handleCategory('Self-help')} className='hover'>
+            <div onClick={() => handleCategory('Fiction')} className='hover'>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="70" height="70">
 
                     <circle cx="256" cy="256" r="256" fill="#3a3a8e" />
@@ -36,7 +36,7 @@ function Categories() {
                 </svg>
                 <h4>category2</h4>
             </div>
-            <div onClick={() => handleCategory('Self-help')} className='hover'>
+            <div onClick={() => handleCategory('Science')} className='hover'>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="70" height="70">
 
                     <circle cx="256" cy="256" r="256" fill="#3a3a8e" />
@@ -54,7 +54,7 @@ function Categories() {
                 </svg>
                 <h4>category3</h4>
             </div>
-            <div onClick={() => handleCategory('Self-help')} className='hover'>
+            <div onClick={() => handleCategory('History')} className='hover'>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="70" height="70">
 
                     <circle cx="256" cy="256" r="256" fill="#3a3a8e" />
@@ -72,7 +72,7 @@ function Categories() {
                 </svg>
                 <h4>category4</h4>
             </div>
-            <div onClick={() => handleCategory('Self-help')} className='hover'>
+            <div onClick={() => handleCategory('Technolgy')} className='hover'>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="70" height="70">
 
                     <circle cx="256" cy="256" r="256" fill="#3a3a8e" />

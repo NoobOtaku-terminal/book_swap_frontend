@@ -5,8 +5,14 @@
             { "title": "Atomic Habits", "author": "James Clear" },
             { "title": "The Hidden Hindu", "author": "Akshat Gupta" },
             { "title": "Do It Today", "author": "Darius Foroux" },
-            { "title": "The Courage to Be Disliked", "author": "Ichiro Kishimi" },
-            { "title": "Don't Believe Everything You Think", "author": "Joseph Nguyen" },
+            {
+                "title": "The Courage to Be Disliked",
+                "author": "Ichiro Kishimi"
+            },
+            {
+                "title": "Don't Believe Everything You Think",
+                "author": "Joseph Nguyen"
+            },
             { "title": "The Power of Habit", "author": "Charles Duhigg" },
             { "title": "Grit", "author": "Angela Duckworth" },
             { "title": "Mindset", "author": "Carol Dweck" },
@@ -37,11 +43,71 @@
             { "title": "A Brief History of Time", "author": "Stephen Hawking" },
             { "title": "The Gene", "author": "Siddhartha Mukherjee" },
             { "title": "Cosmos", "author": "Carl Sagan" },
-            { "title": "The Immortal Life of Henrietta Lacks", "author": "Rebecca Skloot" },
+            {
+                "title": "The Immortal Life of Henrietta Lacks",
+                "author": "Rebecca Skloot"
+            },
             { "title": "The Order of Time", "author": "Carlo Rovelli" },
-            { "title": "The Emperor of All Maladies", "author": "Siddhartha Mukherjee" },
-            { "title": "The Structure of Scientific Revolutions", "author": "Thomas Kuhn" },
+            {
+                "title": "The Emperor of All Maladies",
+                "author": "Siddhartha Mukherjee"
+            },
+            {
+                "title": "The Structure of Scientific Revolutions",
+                "author": "Thomas Kuhn"
+            },
             { "title": "Homo Deus", "author": "Yuval Noah Harari" }
+        ]
+    },
+    {
+        "name": "History",
+        "books": [
+            { "title": "Guns, Germs, and Steel", "author": "Jared Diamond" },
+            { "title": "The Silk Roads", "author": "Peter Frankopan" },
+            { "title": "The Wright Brothers", "author": "David McCullough" },
+            { "title": "The Diary of a Young Girl", "author": "Anne Frank" },
+            {
+                "title": "A People's History of the United States",
+                "author": "Howard Zinn"
+            },
+            { "title": "Team of Rivals", "author": "Doris Kearns Goodwin" },
+            {
+                "title": "The History of the Ancient World",
+                "author": "Susan Wise Bauer"
+            },
+            {
+                "title": "The Rise and Fall of the Third Reich",
+                "author": "William L. Shirer"
+            },
+            { "title": "1776", "author": "David McCullough" },
+            { "title": "Alexander Hamilton", "author": "Ron Chernow" }
+        ]
+    },
+    {
+        "name": "Technology",
+        "books": [
+            { "title": "The Innovators", "author": "Walter Isaacson" },
+            {
+                "title": "Hooked: How to Build Habit-Forming Products",
+                "author": "Nir Eyal"
+            },
+            { "title": "Steve Jobs", "author": "Walter Isaacson" },
+            { "title": "The Shallows", "author": "Nicholas Carr" },
+            { "title": "The Lean Startup", "author": "Eric Ries" },
+            {
+                "title": "Elon Musk: Tesla, SpaceX, and the Quest for a Fantastic Future",
+                "author": "Ashlee Vance"
+            },
+            {
+                "title": "The Second Machine Age",
+                "author": "Erik Brynjolfsson"
+            },
+            { "title": "How Google Works", "author": "Eric Schmidt" },
+            { "title": "Superintelligence", "author": "Nick Bostrom" },
+            {
+                "title": "Artificial Intelligence: A Guide for Thinking Humans",
+                "author": "Melanie Mitchell"
+            }
         ]
     }
 ]

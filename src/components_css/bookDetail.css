@@ -1,0 +1,86 @@
+.book-detail-page {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1rem;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.book-overview {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.book-cover {
+    width: 150px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.book-info {
+    flex: 1;
+}
+
+.book-info h1 {
+    font-size: 1.8rem;
+    margin: 0.5rem 0;
+    color: #222;
+}
+
+.book-info h3 {
+    color: #555;
+    font-weight: 400;
+    margin: 0.3rem 0;
+}
+
+.synopsis {
+    font-size: 1rem;
+    color: #666;
+    margin: 1rem 0;
+}
+
+.request-swap-btn {
+    background-color: #ff4b2b;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.request-swap-btn:hover {
+    background-color: #ff1e1e;
+}
+
+.owner-info,
+.book-metadata,
+.similar-books {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: #f2f2f2;
+    border-radius: 8px;
+}
+
+.owner-info h3,
+.book-metadata h3,
+.similar-books h3 {
+    font-size: 1.3rem;
+    color: #444;
+    margin-bottom: 0.8rem;
+}
+
+.similar-books ul {
+    list-style: none;
+    padding: 0;
+}
+
+.similar-books li {
+    margin: 0.3rem 0;
+}

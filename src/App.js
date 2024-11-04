@@ -10,7 +10,7 @@ import Footer from './components/footer'
 import ContactUs from './pages/contactus';
 function AppContent() {
   const location = useLocation();  // useLocation now works because it's inside Router
-  const hideHeader = ['/login'];  // List of routes where the header should be hidden
+  const hideHeader = [];  // List of routes where the header should be hidden
 
   return (
     <div >

@@ -1,6 +1,6 @@
-// Login.js
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import '../components_css/login.css'; // Import the CSS file
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -13,10 +13,8 @@ const Login = () => {
         // Placeholder for actual authentication logic (replace with API call)
         if (email === 'user@example.com' && password === 'password') {
             alert("Login successful!");
-            // Set authentication status in localStorage
-            localStorage.setItem('isAuthenticated', 'true'); // Store as a string
+            localStorage.setItem('isAuthenticated', 'true');
 
-            // Redirect to My Account page on success
             navigate('/myaccount');
         } else {
             alert("Invalid credentials!");
