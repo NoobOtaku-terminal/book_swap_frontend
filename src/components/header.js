@@ -20,7 +20,9 @@ function Header() {
         navigate('/login');  // Redirect to login page
     };
 
-
+    const handleSignUp = () => {
+        navigate('/signUp')
+    }
     return (
         <div className='glow-border' style={{ backgroundColor: '#2c2e40', padding: '1rem 4rem' }}> {/* Corrected padding */}
             <div className='d-flex justify-content-between align-items-center mx-4 '> {/* Use Bootstrap margin utility class */}
@@ -59,7 +61,7 @@ function Header() {
                         ) : (
                             <div className="auth-options">
                                 <button onClick={handleLogin} className="auth-button">Login</button>
-                                <button onClick={handleLogin} className="auth-button">SignUp</button>
+                                <button onClick={handleSignUp} className="auth-button">SignUp</button>
                             </div>
                         )}
                     </div>
