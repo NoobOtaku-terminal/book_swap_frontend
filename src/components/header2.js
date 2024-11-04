@@ -59,7 +59,7 @@ function Header() {
                         ) : (
                             <div className="auth-options">
                                 <button onClick={handleLogin} className="auth-button">Login</button>
-                                <button onClick={handleLogin} className="auth-button">SignUp</button>
+                                <button onClick={handleLogin} className="auth-button">Sign Up</button>
                             </div>
                         )}
                     </div>
