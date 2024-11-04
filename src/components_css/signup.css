@@ -1,4 +1,5 @@
 /* src/Signup.css */
+
 .form {
     position: relative;
     display: flex;
@@ -6,31 +7,32 @@
     border-radius: 0.75rem;
     background-color: #fff;
     color: rgb(97, 97, 97);
-    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.05);
-    width: 30rem; /* Increased width */
-    margin: auto; /* Center the form */
-    padding: 3rem; /* Increased padding for more space inside the form */
-    max-width: 90%; /* Ensure it doesn't exceed the viewport */
+    /* box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.05); */
+    width: 30rem;
+    margin: auto;
+    padding: 3rem;
+    max-width: 90%;
+    box-shadow: 8px 5px 14px 4px rgba(3, 3, 3, 0.541);
 }
 
 .header {
     background-color: #1e88e5;
     background-image: linear-gradient(to top right, #1e88e5, #42a5f5);
-    margin-bottom: 1.5rem; /* Increased margin for more spacing */
+    margin-bottom: 1.5rem;
     border-radius: 0.75rem;
     color: #fff;
     font-weight: 600;
-    font-size: 2.2rem; /* Increased font size for the header */
+    font-size: 2.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 5rem; /* Adjusted height */
+    height: 5rem;
 }
 
 .inputs {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem; /* Increased gap between inputs */
+    gap: 1.5rem;
 }
 
 .input {
@@ -38,7 +40,7 @@
     outline: 0;
     color: rgb(69, 90, 100);
     font-weight: 400;
-    padding: 1rem; /* Increased padding for input fields */
+    padding: 1rem;
     background-color: transparent;
     border-radius: 0.375rem;
     width: 100%;
@@ -80,8 +82,8 @@
 .sigin-btn {
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 0.875rem; /* Increased button font size */
-    padding: 1rem 1.5rem; /* Increased padding for the button */
+    font-size: 0.875rem;
+    padding: 1rem 1.5rem;
     background-color: #1e88e5;
     background-image: linear-gradient(to top right, #1e88e5, #42a5f5);
     border-radius: 0.5rem;
@@ -92,7 +94,7 @@
 
 .signup-link {
     font-weight: 300;
-    font-size: 0.9rem; /* Increased font size for the signup link */
+    font-size: 0.9rem;
     display: flex;
     align-items: center;
     justify-content: center;
