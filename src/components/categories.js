@@ -70,7 +70,7 @@ function Categories() {
                     <circle cx="384" cy="96" r="12" fill="#f7d774" />
                     <circle cx="256" cy="64" r="10" fill="#f7d774" />
                 </svg>
-                <h4>category4</h4>
+                <h4>Histroy</h4>
             </div>
             <div onClick={() => handleCategory('Technolgy')} className='hover'>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="70" height="70">
@@ -88,7 +88,7 @@ function Categories() {
                     <circle cx="384" cy="96" r="12" fill="#f7d774" />
                     <circle cx="256" cy="64" r="10" fill="#f7d774" />
                 </svg>
-                <h4>category5</h4>
+                <h4>Technology</h4>
             </div>
 
 
