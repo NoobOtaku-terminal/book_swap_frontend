@@ -1,30 +1,55 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import logo from '../assets/book.jpeg';
 import { useNavigate } from 'react-router-dom';
-
+import { authService } from '../services/api';
+import '../components_css/headerMyAccount.css';
 function HeaderMyAccount() {
+  const [userInfo, setUserInfo] = useState(null);
   const navigate = useNavigate();
 
-  const handleLogout = () => {
-    localStorage.removeItem('isAuthenticated');
-    navigate('/'); // Redirect to homepage or login page after logout
+  useEffect(() => {
+    const fetchUserInfo = async () => {
+      try {
+        const response = await authService.getUserProfile();
+        if (response.success) {
+          setUserInfo(response.data);
+        }
+      } catch (error) {
+        console.error('Failed to fetch user info:', error);
+      }
+    };
+
+    fetchUserInfo();
+  }, []);
+
+  const handleLogout = async () => {
+    try {
+      await authService.logout();
+      localStorage.removeItem('token');
+      localStorage.removeItem('isAuthenticated');
+      navigate('/');
+    } catch (error) {
+      console.error('Logout failed:', error);
+    }
   };
 
-  // Retrieve user details if they are stored in localStorage
-  const userName = localStorage.getItem('userName') || 'Name'; // Replace 'Name' with default or fetched user name
-  const userEmail = localStorage.getItem('userEmail') || 'Email'; // Replace 'Email' with default or fetched email
-
   return (
-    <div style={{ display: "flex", width: "100%", justifyContent: "space-between", alignItems: "center", margin: "1% 0%" }}>
-      <div style={{ display: "flex", alignItems: "center" }}>
-        <img src={logo} alt="User Avatar" style={{ width: "50px", height: "50px", borderRadius: "50%", marginRight: "10px" }} />
+    <div className="header-myaccount">
+      <div className="header-left">
+        <img src={logo} alt="User Avatar" className="header-avatar" />
         <h4>My Account</h4>
       </div>
-      <h5>{userName}</h5>
-      <h5>{userEmail}</h5>
-      <div>
-        <button onClick={handleLogout}>Logout</button>
+      <div className="header-user-info">
+        {userInfo && (
+          <>
+            <h5>Username: {userInfo.username}</h5>
+            <h5>Email: {userInfo.email}</h5>
+          </>
+        )}
       </div>
+      <button className="logout-button" onClick={handleLogout}>
+        Logout
+      </button>
     </div>
   );
 }

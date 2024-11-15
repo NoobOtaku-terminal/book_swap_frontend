@@ -1,40 +1,79 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import styles from '../components_css/login.module.css'; // Import CSS Module
+import { authService } from '../services/api';
+import styles from '../components_css/login.module.css';
 
 const Login = () => {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
     const navigate = useNavigate();
+    const [formData, setFormData] = useState({
+        email: '',
+        password: ''
+    });
+    const [error, setError] = useState('');
+    const [loading, setLoading] = useState(false);
 
     const handleLogin = async (e) => {
         e.preventDefault();
+        setError('');
+        setLoading(true);
 
-        // Placeholder for actual authentication logic (replace with API call)
-        if (email === 'user@example.com' && password === 'password') {
-            alert("Login successful!");
-            localStorage.setItem('isAuthenticated', 'true');
-            navigate('/myaccount');
-        } else {
-            alert("Invalid credentials!");
+        try {
+            const response = await authService.login(formData);
+            if (response.success) {
+                navigate('/myaccount');
+            }
+        } catch (error) {
+            setError(error.message || 'Invalid credentials. Please try again.');
+        } finally {
+            setLoading(false);
         }
+    };
+
+    const handleChange = (e) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        });
     };
 
     return (
         <div className={styles.Container}>
-            <form className={styles.form}>
+            <form className={styles.form} onSubmit={handleLogin}>
                 <div className={styles['form-container']}>
                     <div className={styles['login-header']}>Sign In</div>
+                    {error && <div className={styles.error}>{error}</div>}
                     <div className={styles.inputs}>
-                        <input placeholder="Email" className={styles.input} type="text" />
-                        <input placeholder="Password" className={styles.input} type="password" />
+                        <input
+                            name="email"
+                            value={formData.email}
+                            onChange={handleChange}
+                            placeholder="Email"
+                            className={styles.input}
+                            type="email"
+                            required
+                        />
+                        <input
+                            name="password"
+                            value={formData.password}
+                            onChange={handleChange}
+                            placeholder="Password"
+                            className={styles.input}
+                            type="password"
+                            required
+                        />
                         <div className={styles['checkbox-container']}>
                             <label className={styles.checkbox}>
                                 <input type="checkbox" id="checkbox" />
                             </label>
                             <label htmlFor="checkbox" className={styles['checkbox-text']}>Remember me</label>
                         </div>
-                        <button onClick={handleLogin} className={styles['signin-btn']}>Submit</button>
+                        <button
+                            type="submit"
+                            className={styles['signin-btn']}
+                            disabled={loading}
+                        >
+                            {loading ? 'Signing in...' : 'Submit'}
+                        </button>
                         <a className={styles.forget} href="#">Forget password?</a>
                         <p className={styles['signup-link']}>Don't have an account? <a href="/signup">Sign up</a></p>
                     </div>
