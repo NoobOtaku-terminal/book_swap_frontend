@@ -54,24 +54,9 @@ function Category() {
                                 <p className="author-name clamp-text">Author: {book.author}</p>
                                 <button
                                     className="button"
-                                    onClick={async () => {
-                                        if (!localStorage.getItem('isAuthenticated')) {
-                                            navigate('/login');
-                                            return;
-                                        }
-                                        try {
-                                            const response = await bookService.requestBorrow(book._id);
-                                            if (response.success) {
-                                                alert('Borrow request sent successfully!');
-                                            } else {
-                                                alert(response.message || 'Failed to request book');
-                                            }
-                                        } catch (error) {
-                                            alert('Error requesting book');
-                                        }
-                                    }}
+                                    onClick={() => navigate(`/book/${book._id}`)}
                                 >
-                                    Borrow
+                                    View Details
                                 </button>
                             </div>
                         </div>

@@ -19,6 +19,7 @@ function Slide() {
         const categoriesData = await Promise.all(
           genres.map(async (genre) => {
             const books = await bookService.getBooksByGenre(genre);
+            console.log(typeof books);
             return {
               name: genre,
               books: books
@@ -59,7 +60,7 @@ function Slide() {
           }}>
             {category.books.map((book, idx) => (
               <SplideSlide key={idx}>
-                <div className="card">
+                <div className="card" onClick={() => navigate(`/book/${book._id}`)}>
                   <img
                     src={book.image || defaultBookImage}
                     alt={book.title}
