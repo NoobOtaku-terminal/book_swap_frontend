@@ -1,5 +1,5 @@
-const API_BASE_URL = 'http://localhost:5000/api';
-// const API_BASE_URL = 'https://book-swap-backend.onrender.com';
+// const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = 'https://book-swap-backend.onrender.com/api';
 
 // Auth Service
 export const authService = {
