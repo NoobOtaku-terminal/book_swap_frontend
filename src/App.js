@@ -8,7 +8,8 @@ import Login from './pages/login';
 import Category from './pages/category'
 import Footer from './components/footer'
 import ContactUs from './pages/contactus';
-import SignUp from './pages/signUp'
+import SignUp from './pages/signUp';
+import BookDetail from './pages/bookDetail';
 function AppContent() {
   const location = useLocation();  // useLocation now works because it's inside Router
   const hideHeader = [];  // List of routes where the header should be hidden
@@ -26,6 +27,7 @@ function AppContent() {
           <Route path="/contactus" element={<ContactUs />} />
           <Route path="/category/:categoryName" element={<Category />} />
           <Route path="/signup" element={<SignUp />} />
+          <Route path="/book/:bookId" element={<BookDetail />} />
         </Routes>
       </div>
 

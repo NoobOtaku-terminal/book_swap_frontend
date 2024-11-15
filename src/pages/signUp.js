@@ -1,29 +1,47 @@
 // src/Signup.js
 import React, { useState } from 'react';
-import '../components_css/signup.css'; // Import CSS for styling
+import { useNavigate } from 'react-router-dom';
+import { authService } from '../services/api';
+import '../components_css/signup.css';
 
 const SignUp = () => {
+    const navigate = useNavigate();
     const [formData, setFormData] = useState({
         username: '',
         email: '',
         password: '',
-        location: '',
     });
+    const [error, setError] = useState('');
 
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
+        setError(''); // Clear error when user types
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log('Form data submitted:', formData);
-        // You can add further logic here, like API calls
+        try {
+            const response = await authService.register(formData);
+            console.log('Registration response:', response); // For debugging
+
+            // Check if user data exists in the response
+            if (response.user && response.token) {
+                alert('Registration successful! Please login.');
+                navigate('/login');
+            } else {
+                setError(response.message || 'Registration failed');
+            }
+        } catch (error) {
+            setError('Registration failed. Please try again.');
+            console.error('Registration error:', error);
+        }
     };
 
     return (
         <form className="form" onSubmit={handleSubmit}>
             <div className="header">Sign Up</div>
+            {error && <div className="error-message">{error}</div>}
             <div className="inputs">
                 <input
                     placeholder="Username"
@@ -49,15 +67,6 @@ const SignUp = () => {
                     type="password"
                     name="password"
                     value={formData.password}
-                    onChange={handleChange}
-                    required
-                />
-                <input
-                    placeholder="Location"
-                    className="input"
-                    type="text"
-                    name="location"
-                    value={formData.location}
                     onChange={handleChange}
                     required
                 />
