@@ -131,6 +131,23 @@ export const authService = {
 
 // Book Service
 export const bookService = {
+    async deleteBook(bookId) {
+        try {
+            const response = await fetch(`${API_BASE_URL}/books/remove/${bookId}`, {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json',
+                    Authorization: `Bearer ${localStorage.getItem('token')}`, // Assuming JWT token authentication
+                },
+            });
+            return response.json();
+        }
+        catch (error) {
+            console.error('Remove book error:', error);
+            throw error;
+        }
+
+    },
     async addBook(bookData) {
         try {
             const response = await fetch(`${API_BASE_URL}/books/add`, {
