@@ -18,6 +18,7 @@
     background-color: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     transition: transform 0.2s ease;
+    position: relative; /* Add for positioning the delete button */
 }
 
 .book-info-account:hover {
@@ -60,4 +61,31 @@
     padding: 4px 8px;
     border-radius: 4px;
     margin-right: 8px;
+}
+
+/* Delete Button Styles */
+.delete-button-account {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.delete-button-account:hover {
+    background: #e60000;
+    transform: scale(1.2);
+}
+.delete-button-account svg {
+    font-size: 14px; /* Adjust icon size */
 }

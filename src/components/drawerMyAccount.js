@@ -66,7 +66,9 @@ function DrawerMyAccount() {
       [name]: value
     }));
   };
-
+  const handleDeleteSuccess = (deletedBookId) => {
+    setUserBooks((prevBooks) => prevBooks.filter((book) => book._id !== deletedBookId));
+  };
   const handleAddBook = async (e) => {
     e.preventDefault();
     try {
@@ -116,14 +118,16 @@ function DrawerMyAccount() {
             <h2>My Books</h2>
             <div className="books-grid">
               {userBooks && userBooks.length > 0 ? (
-                userBooks.map(book => (
+                userBooks.map((book) => (
                   <Borrowedbook
                     key={book._id}
+                    bookId={book._id}
                     title={book.title}
                     author={book.author}
                     image={book.image}
                     genre={book.genre}
                     condition={book.condition}
+                    onDeleteSuccess={handleDeleteSuccess}
                   />
                 ))
               ) : (
