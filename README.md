@@ -1,2 +1,2 @@
 # book_swap_frontend
-This is WebProject
+Backend repository - https://github.com/RohanRegar/book_swap_backend
