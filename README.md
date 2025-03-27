@@ -14,52 +14,52 @@ Backend (Find it here!): BookSwap Backend
 Built with Node.js, Express.js, MongoDB (via Mongoose.js)
 📂 Folder Structure
 
-📦 bookswap-frontend
- ┣ 📂 public
- ┃ ┗ 📜 index.html
- ┣ 📂 src
- ┃ ┣ 📂 assets
- ┃ ┃ ┣ 📜 book.jpeg
- ┃ ┃ ┣ 📜 data.json
- ┃ ┃ ┗ 📜 image.png
- ┃ ┣ 📂 components
- ┃ ┃ ┣ 📜 book.js
- ┃ ┃ ┣ 📜 categories.js
- ┃ ┃ ┣ 📜 drawerMyAccount.js
- ┃ ┃ ┣ 📜 footer.js
- ┃ ┃ ┣ 📜 header.js
- ┃ ┃ ┣ 📜 headerMyAccount.js
- ┃ ┃ ┗ 📜 slide.js
- ┃ ┣ 📂 components_css
- ┃ ┃ ┣ 📜 bookDetail.css
- ┃ ┃ ┣ 📜 books.css
- ┃ ┃ ┣ 📜 category.css
- ┃ ┃ ┣ 📜 contactus.css
- ┃ ┃ ┣ 📜 drawerMyAccount.css
- ┃ ┃ ┣ 📜 footer.css
- ┃ ┃ ┣ 📜 headerMyAccount.css
- ┃ ┃ ┣ 📜 login.module.css
- ┃ ┃ ┣ 📜 search.css
- ┃ ┃ ┣ 📜 signup.css
- ┃ ┃ ┗ 📜 slide.css
- ┃ ┣ 📂 pages
- ┃ ┃ ┣ 📜 bookDetail.js
- ┃ ┃ ┣ 📜 category.js
- ┃ ┃ ┣ 📜 contactus.js
- ┃ ┃ ┣ 📜 landing.js
- ┃ ┃ ┣ 📜 login.js
- ┃ ┃ ┣ 📜 myaccount.js
- ┃ ┃ ┗ 📜 signUp.js
- ┃ ┣ 📂 services
- ┃ ┃ ┗ 📜 api.js
- ┃ ┣ 📜 App.css
- ┃ ┣ 📜 App.js
- ┃ ┣ 📜 index.css
- ┃ ┣ 📜 index.js
- ┃ ┗ 📜 reportWebVitals.js
- ┣ 📜 package.json
- ┣ 📜 README.md
- ┗ 📜 .gitignore
+📦 bookswap-frontend<br>
+ ┣ 📂 public<br>
+ ┃ ┗ 📜 index.html<br>
+ ┣ 📂 src<br>
+ ┃ ┣ 📂 assets<br>
+ ┃ ┃ ┣ 📜 book.jpeg<br>
+ ┃ ┃ ┣ 📜 data.json<br>
+ ┃ ┃ ┗ 📜 image.png<br>
+ ┃ ┣ 📂 components<br>
+ ┃ ┃ ┣ 📜 book.js<br>
+ ┃ ┃ ┣ 📜 categories.js<br>
+ ┃ ┃ ┣ 📜 drawerMyAccount.js<br>
+ ┃ ┃ ┣ 📜 footer.js<br>
+ ┃ ┃ ┣ 📜 header.js<br>
+ ┃ ┃ ┣ 📜 headerMyAccount.js<br>
+ ┃ ┃ ┗ 📜 slide.js<br>
+ ┃ ┣ 📂 components_css<br>
+ ┃ ┃ ┣ 📜 bookDetail.css<br>
+ ┃ ┃ ┣ 📜 books.css<br>
+ ┃ ┃ ┣ 📜 category.css<br>
+ ┃ ┃ ┣ 📜 contactus.css<br>
+ ┃ ┃ ┣ 📜 drawerMyAccount.css<br>
+ ┃ ┃ ┣ 📜 footer.css<br>
+ ┃ ┃ ┣ 📜 headerMyAccount.css<br>
+ ┃ ┃ ┣ 📜 login.module.css<br>
+ ┃ ┃ ┣ 📜 search.css<br>
+ ┃ ┃ ┣ 📜 signup.css<br>
+ ┃ ┃ ┗ 📜 slide.css<br>
+ ┃ ┣ 📂 pages<br>
+ ┃ ┃ ┣ 📜 bookDetail.js<br>
+ ┃ ┃ ┣ 📜 category.js<br>
+ ┃ ┃ ┣ 📜 contactus.js<br>
+ ┃ ┃ ┣ 📜 landing.js<br>
+ ┃ ┃ ┣ 📜 login.js<br>
+ ┃ ┃ ┣ 📜 myaccount.js<br>
+ ┃ ┃ ┗ 📜 signUp.js<br>
+ ┃ ┣ 📂 services<br>
+ ┃ ┃ ┗ 📜 api.js<br>
+ ┃ ┣ 📜 App.css<br>
+ ┃ ┣ 📜 App.js<br>
+ ┃ ┣ 📜 index.css<br>
+ ┃ ┣ 📜 index.js<br>
+ ┃ ┗ 📜 reportWebVitals.js<br>
+ ┣ 📜 package.json<br>
+ ┣ 📜 README.md<br>
+ ┗ 📜 .gitignore<br>
 🏗️ Installation & Setup
 To run this project locally:
 
